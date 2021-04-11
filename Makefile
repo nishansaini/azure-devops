@@ -1,4 +1,7 @@
 hello:
-	echo "thisis first hello.."
+	echo "this is my first make command"
 install:
-	echo "this is is pip install later.."
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
+test:
+	python -m pytest -vv test_hello.py
